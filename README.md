@@ -1,1 +1,0 @@
-# shecan-foundation-fullstack
