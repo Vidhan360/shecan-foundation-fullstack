@@ -1,16 +1,40 @@
 # SheCan Foundation - Full Stack Web Application
 
-## Overview
+## Live Website
 
-A modern full-stack web application developed for the SheCan Foundation Internship Task.
+Add your deployed Vercel link below:
 
-This project goes beyond the basic requirements and includes authentication, database integration, protected admin functionality, responsive design, animations, and backend features.
+https://your-project-name.vercel.app
 
 ---
 
-## Features
+## GitHub Repository
 
-### User Features
+https://github.com/Vidhan360/shecan-foundation-fullstack
+
+---
+
+# Overview
+
+A modern Full Stack Web Application developed for the SheCan Foundation Internship Task.
+
+This project extends beyond the basic requirements and includes:
+
+- Authentication System
+- Database Integration
+- Protected Admin Dashboard
+- Responsive Design
+- Animated User Interface
+- Backend Features
+- Firebase Integration
+
+The goal of the project is to provide an interactive and professional experience while managing user submissions securely.
+
+---
+
+# Features
+
+## User Features
 
 - User Signup
 - User Login
@@ -18,121 +42,162 @@ This project goes beyond the basic requirements and includes authentication, dat
 - Contact Form Submission
 - Responsive Design
 - Dynamic Navbar
+- Smooth Animations
 - Animated Background
 - Glassmorphism UI
+- Page Transitions
 - Form Validation
-- Smooth Page Animations
-
-### Admin Features
-
-- Protected Admin Dashboard
-- View Submitted Data
-- Delete Submissions
-- Firebase Authentication Security
-- Firestore Database Integration
-- Dashboard Statistics
-- Responsive Admin Layout
 
 ---
 
-## Tech Stack
+## Admin Features
 
-### Frontend
+- Protected Admin Dashboard
+- View Form Submissions
+- Delete Submissions
+- Dashboard Statistics
+- Firebase Security
+- Database Integration
+- Responsive Dashboard Layout
+
+---
+
+# Tech Stack
+
+## Frontend
 
 - React.js
 - Tailwind CSS
 - Framer Motion
 
-### Backend / Database
+## Backend
 
 - Firebase Authentication
-- Firebase Firestore
+- Firebase Firestore Database
 
-### Libraries Used
+## Libraries Used
 
 - React Router DOM
-- React Icons
 - React Toastify
+- React Icons
 
 ---
 
-## Folder Structure
+# Project Structure
 
 ```text
-src/
+shecan-foundation/
 
-├── components/
-│   ├── Navbar
-│   ├── Hero
-│   ├── ContactForm
-│   ├── Footer
-│   └── BackgroundAnimation
+├── public/
+│   ├── favicon.svg
+│   └── icons.svg
 
-├── pages/
-│   ├── Home
-│   ├── Login
-│   ├── Signup
-│   └── Admin
+├── src/
 
-├── routes/
-│   └── ProtectedRoute
-
-├── services/
+│   ├── components/
+│   │
+│   ├── BackgroundAnimation.jsx
+│   ├── ContactForm.jsx
+│   ├── Footer.jsx
+│   ├── Hero.jsx
+│   └── Navbar.jsx
+│
+│   ├── pages/
+│   │
+│   ├── Home.jsx
+│   ├── Login.jsx
+│   ├── Signup.jsx
+│   └── Admin.jsx
+│
+│   ├── routes/
+│   │
+│   └── ProtectedRoute.jsx
+│
+│   ├── services/
+│   │
 │   └── firebase.js
+│
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
 
-├── App.jsx
+├── .gitignore
 
-└── main.jsx
+├── README.md
+
+├── package.json
+
+├── vite.config.js
+
+└── package-lock.json
 ```
 
 ---
 
-## Installation and Setup
+# Installation and Setup Guide
 
-### Step 1: Clone Repository
-
-```bash
-git clone <repository-url>
-```
-
-### Step 2: Move into project folder
+## Step 1: Clone Repository
 
 ```bash
-cd shecan-foundation
+git clone https://github.com/Vidhan360/shecan-foundation-fullstack.git
 ```
 
-### Step 3: Install dependencies
+---
+
+## Step 2: Move into project folder
+
+```bash
+cd shecan-foundation-fullstack
+```
+
+---
+
+## Step 3: Install dependencies
 
 ```bash
 npm install
 ```
 
-### Step 4: Create Environment Variables
+---
 
-Create:
+## Step 4: Configure Firebase
+
+Open:
 
 ```bash
-.env
+src/services/firebase.js
 ```
 
-Add Firebase configuration:
+Create your Firebase project and replace the Firebase configuration with your own:
 
-```env
-VITE_FIREBASE_API_KEY=YOUR_KEY
-VITE_FIREBASE_AUTH_DOMAIN=YOUR_DOMAIN
-VITE_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
-VITE_FIREBASE_STORAGE_BUCKET=YOUR_BUCKET
-VITE_FIREBASE_MESSAGING_SENDER_ID=YOUR_ID
-VITE_FIREBASE_APP_ID=YOUR_APP_ID
+```javascript
+const firebaseConfig = {
+
+apiKey:"YOUR_API_KEY",
+
+authDomain:"YOUR_AUTH_DOMAIN",
+
+projectId:"YOUR_PROJECT_ID",
+
+storageBucket:"YOUR_STORAGE_BUCKET",
+
+messagingSenderId:"YOUR_MESSAGING_SENDER_ID",
+
+appId:"YOUR_APP_ID"
+
+}
 ```
 
-### Step 5: Run Development Server
+---
+
+## Step 5: Start Development Server
 
 ```bash
 npm run dev
 ```
 
-Application starts at:
+Project runs at:
 
 ```bash
 http://localhost:5173
@@ -140,40 +205,48 @@ http://localhost:5173
 
 ---
 
-## How to Use Application
+# How To Use Application
 
-### User Flow
+## User Flow
 
-#### Create Account
+### Create Account
 
-1. Open Signup page
-2. Create account using email and password
+1. Open Signup Page
+
+2. Create an account using:
+
+- Email
+- Password
+
 3. Login using created credentials
 
 ---
 
-#### Submit Contact Form
+### Submit Contact Form
 
-1. Navigate to Contact Form section
-2. Enter:
+Navigate to Contact Form and enter:
 
 - Name
 - Email
 - Message
 
-3. Click Submit
+Click:
 
-Submitted data gets stored in Firebase Firestore.
+```text
+Submit
+```
+
+Submitted data gets stored in Firebase Firestore Database.
 
 ---
 
-### Admin Flow
+## Admin Flow
 
-Login with admin credentials.
+Login using admin credentials.
 
 Navigate to:
 
-```bash
+```text
 /admin
 ```
 
@@ -181,14 +254,14 @@ Admin can:
 
 - View all form submissions
 - Delete submissions
+- Monitor submitted data
 - Access protected dashboard
-- Monitor user activity
 
 ---
 
-## Database Structure
+# Database Structure
 
-### Firebase Firestore Collection
+Firebase Firestore Collection:
 
 ```text
 submissions
@@ -198,38 +271,41 @@ Stores:
 
 ```text
 Name
+
 Email
+
 Message
+
 Timestamp
 ```
 
 ---
 
-## Screens / Modules Included
+# Screens Included
 
 - Home Page
 - Login Page
 - Signup Page
 - Contact Form
-- Admin Dashboard
-- Protected Routes
-- Responsive Navbar
+- Protected Admin Dashboard
 - Animated Background System
+- Responsive Navbar
+- Footer Section
 
 ---
 
-## Future Improvements
+# Future Improvements
 
-- Password Recovery Enhancements
-- Search and Filtering
+- Advanced Password Recovery
 - Dashboard Analytics
-- User Roles
+- Search and Filtering
 - Email Notifications
+- User Roles
 - Profile Management
 
 ---
 
-## Developed By
+# Developed By
 
 Vidhan Mishra
 
